@@ -1,27 +1,27 @@
 SRCPATH=.
-prefix=/root/wxTranscode/binary/x264/arm64-v8a
+prefix=/Users/cortxu/Desktop/github/ffmpeg-build/binary/android/x264/arm64-v8a
 exec_prefix=${prefix}
 bindir=${exec_prefix}/bin
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 SYS_ARCH=ARM
 SYS=LINUX
-CC=/opt/tools/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gcc --sysroot=/opt/tools/android-ndk-r14b/platforms/android-21/arch-arm64
-CFLAGS=-Wno-maybe-uninitialized -Wshadow -O3 -ffast-math -O3 -DANDROID -march=armv8-a -Wall -I. -I$(SRCPATH) --sysroot=/opt/tools/android-ndk-r14b/platforms/android-21/arch-arm64 -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden
+CC=/Users/cortxu/Tools/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-gcc --sysroot=/Users/cortxu/Tools/android-ndk-r14b/platforms/android-21/arch-arm64
+CFLAGS=-Wno-maybe-uninitialized -Wshadow -O3 -ffast-math -O3 -DANDROID -march=armv8-a -Wall -I. -I$(SRCPATH) --sysroot=/Users/cortxu/Tools/android-ndk-r14b/platforms/android-21/arch-arm64 -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden
 CFLAGSSO= -DX264_API_EXPORTS
 CFLAGSCLI=
 COMPILER=GNU
 COMPILER_STYLE=GNU
 DEPMM=-MM -g0
 DEPMT=-MT
-LD=/opt/tools/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-gcc --sysroot=/opt/tools/android-ndk-r14b/platforms/android-21/arch-arm64 -o 
-LDFLAGS=-Wl,-dynamic-linker=/system/bin/linker  --sysroot=/opt/tools/android-ndk-r14b/platforms/android-21/arch-arm64 -lm  -ldl
+LD=/Users/cortxu/Tools/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-gcc --sysroot=/Users/cortxu/Tools/android-ndk-r14b/platforms/android-21/arch-arm64 -o 
+LDFLAGS=-Wl,-dynamic-linker=/system/bin/linker  --sysroot=/Users/cortxu/Tools/android-ndk-r14b/platforms/android-21/arch-arm64 -lm  -ldl
 LDFLAGSCLI=
 LIBX264=libx264.a
 CLI_LIBX264=$(LIBX264)
-AR=/opt/tools/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar rc 
-RANLIB=/opt/tools/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
-STRIP=/opt/tools/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+AR=/Users/cortxu/Tools/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-ar rc 
+RANLIB=/Users/cortxu/Tools/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-ranlib
+STRIP=/Users/cortxu/Tools/android-ndk-r14b/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-strip
 INSTALL=install
 AS=
 ASFLAGS= -I. -I$(SRCPATH) -DSTACK_ALIGNMENT=4 -DPIC
